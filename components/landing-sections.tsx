@@ -198,11 +198,11 @@ export function LandingSections({ setHovering }: SectionProps) {
                 </h2>
                 <Link className="inline-block relative z-10" href="mailto:hello@oxifylabs.com">
                     <Button
-                        className="h-20 px-8 text-xl rounded-full bg-primary text-black hover:bg-white hover:text-black transition-colors duration-300"
+                        className="h-14 px-6 text-base rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300"
                         onMouseEnter={() => setHovering(true)}
                         onMouseLeave={() => setHovering(false)}
                     >
-                        Start the conversation <ArrowUpRight className="ml-2" size={24} />
+                        Start the conversation <ArrowUpRight className="ml-2" size={20} />
                     </Button>
                 </Link>
             </section>

@@ -13,14 +13,18 @@ interface HeroProps {
 
 export const Hero = ({ setHovering }: HeroProps) => {
   return (
-    <section className="relative z-10 flex flex-col items-center justify-center min-h-svh px-4 pt-32 pb-12 text-center select-none">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <Pill className="mb-8 border-white/10 bg-white/5 backdrop-blur-md">ANTIGRAVITY MODE</Pill>
-      </motion.div>
+    <section className="relative z-10 flex flex-col items-center justify-center min-h-svh px-4 pt-32 pb-12 text-center select-none overflow-hidden">
+      {/* Tech Decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-12 left-12 w-32 h-px bg-linear-to-r from-primary/50 to-transparent" />
+        <div className="absolute top-12 left-12 w-px h-32 bg-linear-to-b from-primary/50 to-transparent" />
+        <div className="absolute bottom-12 right-12 w-32 h-px bg-linear-to-l from-primary/50 to-transparent" />
+        <div className="absolute bottom-12 right-12 w-px h-32 bg-linear-to-t from-primary/50 to-transparent" />
+
+        {/* Subtle Scanline */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,0,0,0.3)_50%)] bg-size-[100%_4px] opacity-10 pointer-events-none" />
+      </div>
+
 
       <DynamicHeroText />
 

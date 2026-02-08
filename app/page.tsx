@@ -11,11 +11,13 @@ export default function Home() {
   return (
     <>
       <Silk
-        color1="#050505"
-        color2="#1a1a1a"
-        noiseIntensity={0.1}
+        speed={3}
+        scale={1.2}
+        color="#36205b"
+        noiseIntensity={0.8}
+        rotation={0}
       />
-      <div className="fixed inset-0 bg-black/20 pointer-events-none z-1" />
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,217,255,0.15),transparent_50%),radial-gradient(ellipse_at_bottom,rgba(139,92,246,0.1),transparent_50%)] pointer-events-none z-1" />
       <main className="relative z-10">
         <Hero setHovering={setHovering} />
         <LandingSections setHovering={setHovering} />

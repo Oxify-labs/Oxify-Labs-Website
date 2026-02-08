@@ -20,16 +20,26 @@
 }
 
 :root {
-  --background: #000000;
+  --background: #060010;
   --foreground: #ffffff;
-  --primary: #FFC700;
-  --primary-foreground: #ffffff;
-  --border: #424242;
+  --primary: #00d9ff;
+  --primary-foreground: #000000;
+  --border: #2d3748;
+  --accent: #8b5cf6;
+  --accent-glow: #a78bfa;
 
-  --font-mono: var(--font-geist-mono);
-  --font-sentient: var(--font-sentient);
+  --shadow-glow: 0 0 20px 4px var(--tw-shadow-color);
+}
 
-  --shadow-glow: 0 0 8px 2px var(--tw-shadow-color);
+@theme {
+  --font-sentient: var(--font-sentient), serif;
+  --font-mono: var(--font-geist-mono), monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
 }
 
 body {
