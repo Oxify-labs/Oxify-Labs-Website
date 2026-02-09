@@ -35,14 +35,14 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {/* Video Background */}
-        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-neutral-950">
+        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-[#0a0a12]">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute w-full h-full object-cover opacity-60"
-            style={{ minWidth: '100%', minHeight: '100%' }}
+            preload="auto"
+            className="absolute w-full h-full object-cover opacity-80"
           >
             <source src="/silk-1770638581208.webm" type="video/webm" />
           </video>

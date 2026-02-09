@@ -45,7 +45,7 @@ export const BentoItem = ({
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className={cn(
-                "row-span-1 rounded-3xl group/bento bg-white/5 border border-white/10 hover:bg-white/10 transition-colors duration-500 p-8 flex flex-col justify-between space-y-4 relative overflow-hidden",
+                "row-span-1 rounded-3xl group/bento bg-black/50 backdrop-blur-md border border-white/15 hover:bg-black/60 hover:border-white/25 transition-all duration-500 p-8 flex flex-col justify-between space-y-4 relative overflow-hidden shadow-xl shadow-black/20",
                 colSpan === 2 ? "md:col-span-2" : colSpan === 3 ? "md:col-span-3" : "md:col-span-1",
                 className
             )}

@@ -70,7 +70,7 @@ export const Manifesto = () => {
                             transition={{ duration: 0.6, delay: i * 0.15 }}
                         >
                             {/* Card with glassmorphism */}
-                            <div className="relative p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all duration-500 group-hover:border-purple-500/30 group-hover:bg-white/8">
+                            <div className="relative p-8 rounded-2xl border border-white/15 bg-black/50 backdrop-blur-md overflow-hidden transition-all duration-500 group-hover:border-purple-500/40 group-hover:bg-black/60 shadow-xl shadow-black/20">
                                 {/* Animated gradient border glow on hover */}
                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-purple-500/20 via-pink-500/20 to-purple-500/20" />

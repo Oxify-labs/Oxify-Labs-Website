@@ -62,7 +62,7 @@ export const Process = () => {
                             transition={{ duration: 0.6, delay: i * 0.1 }}
                         >
                             {/* Main card */}
-                            <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/8 group-hover:translate-y-[-4px] group-hover:shadow-2xl group-hover:shadow-black/20">
+                            <div className="relative h-full p-8 rounded-3xl border border-white/15 bg-black/50 backdrop-blur-md overflow-hidden transition-all duration-500 group-hover:border-white/25 group-hover:bg-black/60 group-hover:translate-y-[-4px] group-hover:shadow-2xl group-hover:shadow-black/30 shadow-xl shadow-black/20">
 
                                 {/* Gradient glow on hover */}
                                 <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full bg-linear-to-br ${item.accent} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-700`} />
