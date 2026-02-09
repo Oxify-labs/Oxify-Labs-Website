@@ -41,12 +41,12 @@ export const ContactPortal = () => {
                                 Let's discuss your infrastructure needs.
                             </p>
 
-                            <Button
-                                onClick={handleStart}
-                                className="bg-white text-black hover:bg-zinc-200 rounded-full h-14 px-8 text-base font-medium transition-all"
+                            <a
+                                href="mailto:sohomchatterjee07@gmail.com?subject=Project%20Inquiry%20-%20Oxify%20Labs&body=Hi%20Oxify%20Labs%2C%0A%0AI'm%20interested%20in%20discussing%20a%20project.%0A%0A"
+                                className="inline-flex items-center bg-white text-black hover:bg-zinc-200 rounded-full h-14 px-8 text-base font-medium transition-all"
                             >
                                 Start a Project <ArrowRight className="ml-2 w-4 h-4" />
-                            </Button>
+                            </a>
                         </motion.div>
                     )}
 

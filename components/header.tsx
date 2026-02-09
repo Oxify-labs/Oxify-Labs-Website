@@ -19,10 +19,9 @@ export function Header() {
     }, []);
 
     const menuItems = [
-        { name: "About", href: "#about" },
-        { name: "Portfolio", href: "#portfolio" },
-        { name: "Insights", href: "#insights" },
-        { name: "Contact", href: "#contact" },
+        { name: "About", href: "#about", external: false },
+        { name: "LinkedIn", href: "https://www.linkedin.com/company/oxify-labs/", external: true },
+        { name: "Email", href: "mailto:sohomchatterjee07@gmail.com", external: true },
     ];
 
     return (
@@ -43,25 +42,38 @@ export function Header() {
                 </Link>
                 <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
                     {menuItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className={cn(
-                                "transition-colors hover:text-primary relative group py-1",
-                                pathname === item.href ? "text-foreground" : "text-muted-foreground"
-                            )}
-                        >
-                            {item.name}
-                            <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
-                        </Link>
+                        item.external ? (
+                            <a
+                                key={item.name}
+                                href={item.href}
+                                target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+                                rel={item.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                                className="transition-colors hover:text-primary relative group py-1 text-muted-foreground"
+                            >
+                                {item.name}
+                                <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+                            </a>
+                        ) : (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className={cn(
+                                    "transition-colors hover:text-primary relative group py-1",
+                                    pathname === item.href ? "text-foreground" : "text-muted-foreground"
+                                )}
+                            >
+                                {item.name}
+                                <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+                            </Link>
+                        )
                     ))}
                 </nav>
                 <div className="flex items-center gap-4">
-                    <Link href="#contact" className="hidden sm:block">
+                    <a href="mailto:sohomchatterjee07@gmail.com?subject=Project%20Inquiry%20-%20Oxify%20Labs" className="hidden sm:block">
                         <button className="text-xs font-mono bg-white/10 hover:bg-white/20 text-white px-4 py-1.5 rounded-full transition-colors border border-white/5">
                             LET'S TALK
                         </button>
-                    </Link>
+                    </a>
                     <MobileMenu />
                 </div>
             </div>
