@@ -41,7 +41,7 @@ export const Process = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {steps.map((item, i) => (
-                        <div key={i} className="group relative p-8 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-500">
+                        <div key={i} className="group relative p-8 rounded-3xl border border-white/5 bg-white/2 hover:bg-white/4 transition-all duration-500">
                             <span className="block font-mono text-xs text-zinc-600 mb-6 group-hover:text-blue-500 transition-colors">
                                 /{item.step}
                             </span>

@@ -32,7 +32,7 @@ export const Capabilities = () => {
                     title="System Architecture"
                     description="Scalable microservices and distributed systems. We blueprint infrastructures that can handle millions of requests without breaking a sweat."
                     header={
-                        <div className="flex flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center group/card hidden md:flex">
+                        <div className="flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center group/card hidden md:flex">
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-50 group-hover/card:opacity-100 transition-opacity duration-700" />
 
                             {/* Abstract Floating Planes */}
@@ -59,7 +59,7 @@ export const Capabilities = () => {
                     title="Enterprise Security"
                     description="Zero-trust architecture by default. We implement bank-grade encryption and rigorous auth patterns."
                     header={
-                        <div className="flex flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center group/lock hidden md:flex">
+                        <div className="flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center group/lock hidden md:flex">
                             <div className="relative flex items-center justify-center">
                                 {/* Pulse Rings */}
                                 {[0, 1, 2].map((i) => (
@@ -91,7 +91,7 @@ export const Capabilities = () => {
                     title="Frontend Engineering"
                     description="Performance-obsessed interfaces. React Server Components, pure CSS, and 60fps animations."
                     header={
-                        <div className="flex flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center group/ui hidden md:flex">
+                        <div className="flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center group/ui hidden md:flex">
                             <div className="relative w-full max-w-[200px] h-32 bg-white/10 rounded-lg border border-white/10 overflow-hidden backdrop-blur-md transition-all duration-300 group-hover/ui:border-white/30">
                                 <div className="absolute top-0 left-0 w-full h-8 border-b border-white/10 flex items-center px-3 gap-2 bg-white/5">
                                     <div className="w-2 h-2 rounded-full bg-white/30" />
@@ -131,7 +131,7 @@ export const Capabilities = () => {
                     title="Global Deployment"
                     description="Edge-cached, globally distributed. We deploy where your users are to ensure sub-100ms latency worldwide."
                     header={
-                        <div className="flex flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center hidden md:flex">
+                        <div className="flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center hidden md:flex">
                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
 
                             <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
@@ -181,8 +181,8 @@ export const Capabilities = () => {
                     title="Clean Code"
                     description="We write self-documenting, typed code. No 'any', no magic strings, just pure, maintainable logic that scales with your team."
                     header={
-                        <div className="flex flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center hidden md:flex">
-                            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
+                        <div className="flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center hidden md:flex">
+                            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-size-[24px_24px] opacity-20" />
                             <div className="grid grid-cols-4 gap-3 opacity-80 p-8 w-full max-w-sm">
                                 {Array.from({ length: 12 }).map((_, i) => (
                                     <motion.div
@@ -214,11 +214,11 @@ export const Capabilities = () => {
                     title="Mobile Solutions"
                     description="Native performance with React Native. One codebase, zero compromise on feel."
                     header={
-                        <div className="flex flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center hidden md:flex">
-                            <div className="relative w-24 h-40 border-2 border-white/10 rounded-[2rem] bg-black/40 backdrop-blur-sm flex items-center justify-center overflow-hidden">
+                        <div className="flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center hidden md:flex">
+                            <div className="relative w-24 h-40 border-2 border-white/10 rounded-4xl bg-black/40 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                                 <div className="absolute top-2 w-8 h-1 bg-white/10 rounded-full" />
                                 <motion.div
-                                    className="w-16 h-24 bg-gradient-to-tr from-primary/20 to-purple-500/20 rounded-lg backdrop-blur-md"
+                                    className="w-16 h-24 bg-linear-to-tr from-primary/20 to-purple-500/20 rounded-lg backdrop-blur-md"
                                     animate={{
                                         y: [0, -10, 0],
                                         scale: [1, 1.05, 1]
@@ -239,4 +239,3 @@ export const Capabilities = () => {
         </section>
     );
 };
-```

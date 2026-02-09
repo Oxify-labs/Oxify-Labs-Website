@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Instrument_Serif } from "next/font/google"; // Verify this import hasn't changed or if it was different in the original
 import "./globals.css";
-import { Header } from "@/components/header";
-import Silk from "@/components/Silk";
+import { Header } from "../components/header";
+import Silk from "../components/silk";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
