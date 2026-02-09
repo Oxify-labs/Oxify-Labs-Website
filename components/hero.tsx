@@ -16,7 +16,7 @@ export const Hero = ({ setHovering }: { setHovering?: (hovering: boolean) => voi
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col items-center justify-center min-h-[90vh] px-6 pt-32 pb-12 overflow-hidden bg-background"
+      className="relative flex flex-col items-center justify-center min-h-[90vh] px-6 pt-32 pb-12 overflow-hidden"
     >
       {/* 1. Background Structure (Subtle Grid) */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] pointer-events-none" />

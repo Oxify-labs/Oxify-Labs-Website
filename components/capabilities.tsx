@@ -184,11 +184,11 @@ export const Capabilities = () => {
                         <div className="flex-1 w-full h-full min-h-48 rounded-xl bg-neutral-950/50 border border-white/10 relative overflow-hidden items-center justify-center hidden md:flex">
                             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-size-[24px_24px] opacity-20" />
                             <div className="grid grid-cols-4 gap-3 opacity-80 p-8 w-full max-w-sm">
-                                {Array.from({ length: 12 }).map((_, i) => (
+                                {[65, 80, 45, 70, 55, 90, 60, 75, 50, 85, 72, 58].map((width, i) => (
                                     <motion.div
                                         key={i}
                                         className="h-2 rounded-full bg-white/10"
-                                        style={{ width: `${Math.random() * 60 + 40}%` }}
+                                        style={{ width: `${width}%` }}
                                         initial={{ opacity: 0.3 }}
                                         animate={{
                                             opacity: [0.3, 0.6, 0.3],

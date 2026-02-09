@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Instrument_Serif } from "next/font/google"; // Verify this import hasn't changed or if it was different in the original
+import { Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/header";
-import Silk from "../components/silk";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -10,7 +9,7 @@ const geistMono = Geist_Mono({
 });
 
 const instrumentSerif = Instrument_Serif({
-  variable: "--font-sentient", // Verify variable name against original file
+  variable: "--font-sentient",
   subsets: ["latin"],
   weight: "400",
   style: ["normal", "italic"],
@@ -35,8 +34,18 @@ export default function RootLayout({
         className={`${geistMono.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}
         suppressHydrationWarning
       >
-        <div className="fixed inset-0 -z-10 pointer-events-none">
-          <Silk color="#1a1a1a" />
+        {/* Video Background */}
+        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-neutral-950">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute w-full h-full object-cover opacity-60"
+            style={{ minWidth: '100%', minHeight: '100%' }}
+          >
+            <source src="/silk-1770638581208.webm" type="video/webm" />
+          </video>
         </div>
         <Header />
         {children}

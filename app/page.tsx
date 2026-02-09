@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative z-10 bg-background selection:bg-white/20 selection:text-white">
+      <main className="relative z-10 selection:bg-white/20 selection:text-white">
         <Hero setHovering={setHovering} />
         <Capabilities />
         <Manifesto />
@@ -22,7 +22,7 @@ export default function Home() {
         <ContactPortal />
       </main>
 
-      <footer className="relative z-20 py-12 text-center border-t border-white/5 bg-background">
+      <footer className="relative z-20 py-12 text-center border-t border-white/5">
         <p className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.2em]">
           Oxify Labs © {new Date().getFullYear()} <br />
           System Architecture Studio

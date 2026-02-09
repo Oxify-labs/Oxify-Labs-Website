@@ -20,7 +20,7 @@ export const ContactPortal = () => {
     };
 
     return (
-        <section id="contact" className="py-32 px-6 relative flex flex-col items-center justify-center min-h-[60vh] border-t border-white/5 bg-background">
+        <section id="contact" className="py-32 px-6 relative flex flex-col items-center justify-center min-h-[60vh] border-t border-white/5">
 
             <div className="relative z-10 w-full max-w-3xl mx-auto text-center">
                 <AnimatePresence mode="wait">
