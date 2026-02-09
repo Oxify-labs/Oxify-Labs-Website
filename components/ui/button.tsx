@@ -11,10 +11,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-background/80 backdrop-blur-sm text-foreground hover:bg-primary/10 transition-all duration-300 [box-shadow:inset_0_0_20px_0px_rgba(0,217,255,0.1)] hover:[box-shadow:inset_0_0_40px_0px_rgba(0,217,255,0.2)]",
+        ghost: "bg-transparent hover:bg-white/5 text-foreground transition-all duration-300",
       },
       size: {
         default: "h-16 px-6 text-base",
         sm: "h-14 px-6 text-sm",
+        lg: "h-14 px-8 text-base",
       },
     },
     defaultVariants: {

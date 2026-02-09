@@ -19,10 +19,10 @@ export const Hero = ({ setHovering }: { setHovering?: (hovering: boolean) => voi
       className="relative flex flex-col items-center justify-center min-h-[90vh] px-6 pt-32 pb-12 overflow-hidden"
     >
       {/* 1. Background Structure (Subtle Grid) */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[64px_64px] mask-[radial-gradient(ellipse_at_center,black_40%,transparent_100%)] pointer-events-none" />
 
       {/* 2. Soft Light Gradient */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-white/[0.02] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-white/2 blur-[120px] rounded-full pointer-events-none" />
 
       <motion.div
         style={{ y, opacity }}
@@ -108,7 +108,7 @@ export const Hero = ({ setHovering }: { setHovering?: (hovering: boolean) => voi
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
       >
-        <div className="w-[1px] h-12 bg-linear-to-b from-transparent via-zinc-700 to-transparent" />
+        <div className="w-px h-12 bg-linear-to-b from-transparent via-zinc-700 to-transparent" />
       </motion.div>
     </section>
   );
