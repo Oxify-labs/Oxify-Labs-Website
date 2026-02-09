@@ -1,49 +1,65 @@
 "use client";
 
-import Link from "next/link";
-import { Logo } from "./logo";
-import { MobileMenu } from "./mobile-menu";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { MobileMenu } from "./mobile-menu";
 
-export const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+export function Header() {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-  return (
-    <div className="fixed top-0 left-0 w-full z-50 flex justify-center pointer-events-none pt-4">
-      <header
-        className={cn(
-          "pointer-events-auto flex items-center justify-between transition-all duration-300 ease-in-out border border-white/10 rounded-full bg-background/50 backdrop-blur-md",
-          isScrolled
-            ? "py-2 px-4 shadow-lg w-[90%] md:w-auto gap-12 bg-background/80"
-            : "py-4 px-8 w-[90%] md:w-fit gap-8 bg-background/40"
-        )}
-      >
-        <Link href="/" className="shrink-0">
-          <Logo className={cn("transition-all duration-300 text-white fill-white stroke-white", isScrolled ? "w-[40px]" : "w-[50px]")} />
-        </Link>
-        <nav className={cn("hidden md:flex items-center justify-center gap-8 transition-all duration-300", isScrolled ? "gap-6" : "gap-10")}>
-          {["About", "Portfolio", "Insights", "Contact"].map((item) => (
-            <Link
-              className="uppercase inline-block font-mono text-xs tracking-wider text-foreground/80 hover:text-foreground/100 duration-150 transition-colors ease-out"
-              href={`#${item.toLowerCase()}`}
-              key={item}
-            >
-              {item}
-            </Link>
-          ))}
-        </nav>
+    const menuItems = [
+        { name: "About", href: "#about" },
+        { name: "Portfolio", href: "#portfolio" },
+        { name: "Insights", href: "#insights" },
+        { name: "Contact", href: "#contact" },
+    ];
 
-        <MobileMenu className="md:hidden" />
-      </header>
-    </div>
-  );
-};
+    return (
+        <header
+            className={cn(
+                "fixed top-0 z-50 w-full transition-all duration-300",
+                isScrolled
+                    ? "bg-background/80 backdrop-blur-md border-b border-border/40 py-2"
+                    : "bg-transparent py-4"
+            )}
+        >
+            <div className="container flex h-12 items-center justify-between px-4 md:px-6 mx-auto">
+                <Link href="/" className="mr-6 flex items-center space-x-2">
+                    <span className="font-bold text-xl tracking-tighter">
+                        OXIFY LABS
+                    </span>
+                </Link>
+                <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    {menuItems.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href}
+                            className={cn(
+                                "transition-colors hover:text-primary relative group",
+                                pathname === item.href ? "text-foreground" : "text-muted-foreground"
+                            )}
+                        >
+                            {item.name}
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                        </Link>
+                    ))}
+                </nav>
+                <div className="flex items-center gap-4">
+                    {/* Add any CTA buttons here if needed */}
+                    <MobileMenu />
+                </div>
+            </div>
+        </header>
+    );
+}
