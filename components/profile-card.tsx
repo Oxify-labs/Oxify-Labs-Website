@@ -16,9 +16,11 @@ interface ProfileCardProps {
         twitter?: string;
         email?: string;
     };
+    imageClassName?: string;
+    imageStyle?: React.CSSProperties;
 }
 
-export function ProfileCard({ name, role, bio, image, socials }: ProfileCardProps) {
+export function ProfileCard({ name, role, bio, image, socials, imageClassName, imageStyle }: ProfileCardProps) {
     const ref = useRef<HTMLDivElement>(null);
 
     // Mouse position relative to the element (for gradient)
@@ -92,7 +94,8 @@ export function ProfileCard({ name, role, bio, image, socials }: ProfileCardProp
                             src={image}
                             alt={name}
                             fill
-                            className="object-cover object-top object-top transition-transform duration-500 group-hover:scale-105"
+                            className={`object-cover object-top transition-transform duration-500 group-hover:scale-105 ${imageClassName || ""}`}
+                            style={imageStyle}
                         />
                     </div>
                 </div>
