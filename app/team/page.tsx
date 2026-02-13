@@ -39,7 +39,7 @@ const TEAM = [
         name: "Sagnik Koley",
         role: "Marketing and Design Lead",
         bio: "Crafting the brand identity and driving user engagement through design-led marketing.",
-        image: "https://github.com/shadcn.png", // Placeholder
+        image: "/Sagnik.jpeg", 
         socials: {
             linkedin: "https://linkedin.com/in/sagnik-koley-624194320/",
             email: "mailto:rikkoley933@gmail.com"
