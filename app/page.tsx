@@ -1,33 +1,27 @@
 "use client";
 
 import { Hero } from "@/components/hero";
+import { TechStack } from "@/components/tech-stack";
 import { Capabilities } from "@/components/capabilities";
-
-import { ContactPortal } from "@/components/contact-portal";
+import { Philosophy } from "@/components/philosophy";
 import { Process } from "@/components/process";
-import { Manifesto } from "@/components/manifesto";
-import { useState } from "react";
+import { ImpactStats } from "@/components/impact-stats";
+import { Testimonials } from "@/components/testimonials";
+import { CtaFooter } from "@/components/cta-footer";
 
 export default function Home() {
-  const [hovering, setHovering] = useState(false);
-
   return (
     <>
-      <main className="relative z-10 selection:bg-white/20 selection:text-white">
-        <Hero setHovering={setHovering} />
-        <Capabilities />
-        <Manifesto />
-
+      <main className="relative z-10 selection:bg-white/20 selection:text-white pb-32">
+        <Hero />
+        <TechStack />
         <Process />
-        <ContactPortal />
+        <Capabilities />
+        <Philosophy />
+        <ImpactStats />
+        <Testimonials />
+        <CtaFooter />
       </main>
-
-      <footer className="relative z-20 py-12 text-center border-t border-white/5">
-        <p className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.2em]">
-          Oxify Labs © {new Date().getFullYear()} <br />
-          System Architecture Studio
-        </p>
-      </footer>
     </>
   );
 }

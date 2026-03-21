@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist_Mono, Instrument_Serif, Barlow } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/header";
-import Silk from "../components/silk";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -14,6 +13,12 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
   style: ["normal", "italic"],
+});
+
+const barlow = Barlow({
+  variable: "--font-barlow",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -32,14 +37,26 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistMono.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}
+        className={`${geistMono.variable} ${instrumentSerif.variable} ${barlow.variable} font-body font-light antialiased text-foreground relative min-h-screen bg-black`}
         suppressHydrationWarning
       >
-        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-[#0a0a12]">
-          <Silk speed={5} scale={1} color="#7B7481" noiseIntensity={1.5} rotation={0} />
+        <div className="fixed inset-0 z-0 overflow-hidden bg-black pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover scale-[1.05]"
+          >
+            <source src="/background.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-t from-black to-transparent"></div>
         </div>
-        <Header />
-        {children}
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

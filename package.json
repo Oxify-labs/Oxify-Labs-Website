@@ -53,6 +53,7 @@
     "expo-gl": "latest",
     "framer-motion": "^12.33.0",
     "geist": "^1.7.0",
+    "hls.js": "^1.6.15",
     "input-otp": "1.4.2",
     "install": "^0.13.0",
     "leva": "latest",

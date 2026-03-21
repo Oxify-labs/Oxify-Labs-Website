@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { HlsVideo } from "./hls-video";
 
 const steps = [
     {
@@ -31,75 +33,56 @@ const steps = [
 
 export const Process = () => {
     return (
-        <section className="py-32 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
-            {/* Ambient background elements */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-white/20 to-transparent" />
+        <section className="relative w-full min-h-[700px] py-32 px-6 md:px-16 lg:px-24 flex items-center justify-center overflow-hidden bg-transparent">
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            {/* Content */}
+            <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto min-h-[500px]">
+                {/* Badge */}
                 <motion.div
-                    className="mb-20"
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                    className="liquid-glass rounded-full px-6 py-2 mb-8"
                 >
-                    <span className="font-mono text-xs uppercase tracking-widest text-cyan-400/80 mb-4 block">
-                        Our Methodology
-                    </span>
-                    <h2 className="font-sentient text-4xl md:text-5xl text-white">
-                        Precision in every step.
-                    </h2>
+                    <span className="text-sm font-medium text-white/90">Product Engineering</span>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {steps.map((item, i) => (
-                        <motion.div
-                            key={i}
-                            className="group relative"
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: i * 0.1 }}
-                        >
-                            {/* Main card */}
-                            <div className="relative h-full p-8 rounded-3xl border border-white/15 bg-black/50 backdrop-blur-md overflow-hidden transition-all duration-500 group-hover:border-white/25 group-hover:bg-black/60 group-hover:translate-y-[-4px] group-hover:shadow-2xl group-hover:shadow-black/30 shadow-xl shadow-black/20">
+                {/* Heading */}
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white mb-8"
+                >
+                    You define the vision. We build the infrastructure.
+                </motion.h2>
 
-                                {/* Gradient glow on hover */}
-                                <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full bg-linear-to-br ${item.accent} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-700`} />
+                {/* Subtext */}
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="text-lg md:text-xl text-white/60 font-body font-light mb-12 max-w-2xl"
+                >
+                    From rapid MVP prototyping to production-ready microservices. We handle the architecture, design, code, and deployment.
+                </motion.p>
 
-                                {/* Top border accent */}
-                                <div className={`absolute top-0 left-0 right-0 h-px bg-linear-to-r ${item.accent} opacity-0 group-hover:opacity-60 transition-opacity duration-500`} />
-
-                                {/* Step number with glow */}
-                                <div className="relative mb-8">
-                                    <span className={`block font-mono text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r ${item.accent} opacity-40 group-hover:opacity-100 transition-opacity duration-500`}>
-                                        {item.step}
-                                    </span>
-                                    <div className={`absolute -bottom-2 left-0 w-8 h-px bg-linear-to-r ${item.accent} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
-                                </div>
-
-                                {/* Title */}
-                                <h3 className="text-xl text-white font-medium mb-4 transition-all duration-300 group-hover:translate-x-1">
-                                    {item.title}
-                                </h3>
-
-                                {/* Description */}
-                                <p className="text-zinc-400 text-sm leading-relaxed group-hover:text-zinc-300 transition-colors duration-300">
-                                    {item.description}
-                                </p>
-
-                                {/* Corner dot indicator */}
-                                <div className={`absolute top-8 right-8 w-2 h-2 rounded-full bg-linear-to-r ${item.accent} opacity-30 group-hover:opacity-100 group-hover:shadow-lg transition-all duration-500`} />
-
-                                {/* Bottom gradient line */}
-                                <div className={`absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent ${item.accent} to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-500`} />
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-
-                {/* Connecting line decoration */}
-                <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent -z-10" />
+                {/* Button */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                    <a href="mailto:sohomchatterjee07@gmail.com?subject=Start%20a%20Project">
+                        <button className="liquid-glass-strong px-8 py-4 rounded-full flex items-center gap-2 text-white font-medium transition-transform hover:scale-105">
+                            Start a Project <ArrowUpRight className="w-4 h-4" />
+                        </button>
+                    </a>
+                </motion.div>
             </div>
         </section>
     );
