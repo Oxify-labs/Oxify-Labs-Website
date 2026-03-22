@@ -88,13 +88,13 @@ export function ProfileCard({ name, role, bio, image, socials, imageClassName, i
 
             <div className="relative flex flex-col p-6 h-full" style={{ transform: "translateZ(20px)" }}>
                 {/* Image */}
-                <div className="mb-6 overflow-hidden rounded-xl border border-white/5 bg-black/20 p-2">
-                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                <div className="mb-6 overflow-hidden rounded-2xl border border-white/5 bg-black/20">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
                         <Image
                             src={image}
                             alt={name}
                             fill
-                            className={`object-cover object-top transition-transform duration-500 group-hover:scale-105 ${imageClassName || ""}`}
+                            className={`object-cover object-center transition-transform duration-500 group-hover:scale-105 ${imageClassName || ""}`}
                             style={imageStyle}
                         />
                     </div>

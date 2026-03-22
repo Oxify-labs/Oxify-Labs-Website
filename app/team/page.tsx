@@ -2,7 +2,6 @@
 
 import { Pill } from "@/components/pill";
 import { ProfileCard } from "@/components/profile-card";
-import Link from "next/link";
 
 // Sample Data - Replace with real info
 const TEAM = [
@@ -13,7 +12,7 @@ const TEAM = [
         image: "/Sohom.jpeg",
         socials: {
             linkedin: "https://linkedin.com/in/sohom-chatterjee-61828a312/",
-            email: "mailto:sohomchatterjee07@gmail.com"
+            email: "mailto:sohomchatterjee07@oxifylabs.app"
         }
     },
     {
@@ -23,7 +22,7 @@ const TEAM = [
         image: "/Rohit.jpeg",
         socials: {
             linkedin: "https://linkedin.com/in/rohit-kumar-kundu/",
-            email: "mailto:kundurohit53@gmail.com"
+            email: "mailto:rohit.kundu@oxifylabs.app"
         }
     },
     {
@@ -33,17 +32,17 @@ const TEAM = [
         image: "/krishnendu.JPEG",
         socials: {
             linkedin: "https://linkedin.com/in/krishnendu-samanta-25302a238/",
-            email: "mailto:skrishnendu115@gmail.com"
+            email: "mailto:skrishnendu115@oxifylabs.app"
         }
     },
     {
         name: "Sagnik Koley",
-        role: "Marketing and Design Lead",
+        role: "Design Lead",
         bio: "Crafting the brand identity and driving user engagement through design-led marketing.",
-        image: "/Sagnik.jpeg", 
+        image: "/Sagnik.jpeg",
         socials: {
             linkedin: "https://linkedin.com/in/sagnik-koley-624194320/",
-            email: "mailto:rikkoley933@gmail.com"
+            email: "mailto:sagnik.k@oxifylabs.app"
         }
     },
     {
@@ -53,7 +52,17 @@ const TEAM = [
         image: "/Debojyoti.jpeg",
         socials: {
             linkedin: "https://linkedin.com/in/debojyoti-banerjee30/",
-            email: "mailto:debojyotibanerjee18@gmail.com"
+            email: "mailto:debojyotibanerjee18@oxifylabs.app"
+        }
+    },
+    {
+        name: "Prachi Jha",
+        role: "Marketing and Outreach Lead",
+        bio: "Connecting Oxify Labs with the world through strategic outreach and brand storytelling.",
+        image: "/prachi.png",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/prachi-jha-297b962b3",
+            email: "mailto:prachi.jha@oxifylabs.app"
         }
     },
 ];
@@ -70,14 +79,6 @@ export default function TeamPage() {
                     <p className="font-body font-light text-white/70 text-base md:text-lg max-w-2xl">
                         Engineers, designers, and thinkers crafting the future.
                     </p>
-                    <div className="flex flex-wrap items-center gap-4 pt-2">
-                        <Link href="/#capabilities" className="liquid-glass-strong px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-white/90 transition-colors">
-                            Explore Capabilities
-                        </Link>
-                        <Link href="/#stack" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
-                            View Stack
-                        </Link>
-                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">

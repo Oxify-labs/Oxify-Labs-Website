@@ -45,7 +45,7 @@ export function BlurText({ text, className, delay = 0.1 }: BlurTextProps) {
 
   return (
     <motion.div
-      style={{ overflow: "hidden", display: "flex", flexWrap: "wrap" }}
+      style={{ display: "flex", flexWrap: "wrap" }}
       className={cn("justify-center text-center", className)}
       variants={container}
       initial="hidden"
@@ -53,13 +53,14 @@ export function BlurText({ text, className, delay = 0.1 }: BlurTextProps) {
       viewport={{ once: true, margin: "-100px" }}
     >
       {words.map((word, index) => (
-        <motion.span
-          variants={child}
-          style={{ marginRight: "0.25em" }}
+        <span
           key={index}
+          style={{ overflow: "hidden", display: "inline-block", marginRight: "0.25em" }}
         >
-          {word}
-        </motion.span>
+          <motion.span variants={child} style={{ display: "inline-block" }}>
+            {word}
+          </motion.span>
+        </span>
       ))}
     </motion.div>
   );

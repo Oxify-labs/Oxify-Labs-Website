@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Instrument_Serif, Barlow } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/header";
+import { VideoBackground } from "../components/video-background";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -40,19 +41,7 @@ export default function RootLayout({
         className={`${geistMono.variable} ${instrumentSerif.variable} ${barlow.variable} font-body font-light antialiased relative min-h-screen`}
         suppressHydrationWarning
       >
-        <div className="fixed inset-0 z-0 overflow-hidden bg-black pointer-events-none">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover scale-[1.05]"
-          >
-            <source src="/background.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-t from-black to-transparent"></div>
-        </div>
+        <VideoBackground />
         <div className="relative z-10 flex flex-col min-h-screen">
           <Header />
           {children}

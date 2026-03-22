@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ delay: 1, duration: 0.5 }}
           className="flex flex-col sm:flex-row items-center gap-6"
         >
-          <a href="mailto:sohomchatterjee07@gmail.com?subject=System%20Architecture%20Review">
+          <a href="https://calendly.com/sohomchatterjee07-oxifylabs/let-s-build-something-great" target="_blank" rel="noreferrer noopener">
             <button className="liquid-glass-strong px-8 py-4 rounded-full flex items-center gap-2 text-white font-medium transition-transform hover:scale-105">
               Discuss your system <ArrowUpRight className="w-4 h-4" />
             </button>
