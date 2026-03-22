@@ -55,7 +55,7 @@ export function BlurText({ text, className, delay = 0.1 }: BlurTextProps) {
       {words.map((word, index) => (
         <span
           key={index}
-          style={{ overflow: "hidden", display: "inline-block", marginRight: "0.25em" }}
+          style={{ overflow: "hidden", display: "inline-block", marginRight: "0.25em", paddingBottom: "0.5em", marginBottom: "-0.5em" }}
         >
           <motion.span variants={child} style={{ display: "inline-block" }}>
             {word}
