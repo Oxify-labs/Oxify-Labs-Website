@@ -8,7 +8,7 @@ export function CtaFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <section className="relative w-full min-h-[800px] flex flex-col justify-between pt-32 overflow-hidden bg-transparent border-t border-white/5">
+    <section className="relative w-full flex flex-col justify-between pt-24 pb-0 overflow-hidden bg-transparent border-t border-white/5">
 
       {/* Main CTA Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-5xl mx-auto flex-1 w-full">
@@ -44,9 +44,13 @@ export function CtaFooter() {
               Book a Call <ArrowUpRight className="w-4 h-4" />
             </button>
           </a>
-          <a href="/#stack">
-            <button className="bg-white text-black px-8 py-4 rounded-full font-medium transition-transform hover:scale-105">
-              View Stack
+          <a
+            href="https://www.linkedin.com/company/oxify-labs/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <button className="bg-white text-black px-8 py-4 rounded-full font-medium transition-transform hover:scale-105 flex items-center gap-2">
+              Contact Us <ArrowUpRight className="w-4 h-4" />
             </button>
           </a>
         </motion.div>

@@ -9,24 +9,9 @@ import { ArrowUpRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative w-full h-[1000px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full flex items-start justify-center overflow-hidden">
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center pt-[150px] max-w-5xl mx-auto">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="liquid-glass rounded-full px-4 py-1.5 flex items-center gap-3 mb-8"
-        >
-          <span className="bg-white text-black text-xs font-semibold px-2 py-0.5 rounded-full">
-            New
-          </span>
-          <span className="text-sm font-medium text-white/80">
-            A Technology & Product Engineering Studio
-          </span>
-        </motion.div>
-
+      <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center pt-44 md:pt-52 pb-28 max-w-5xl mx-auto">
         {/* Heading */}
         <BlurText
           text="Where systems architecture meets long-term compounding."

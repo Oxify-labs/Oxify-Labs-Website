@@ -25,7 +25,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="relative w-full py-32 px-6 md:px-16 lg:px-24 bg-transparent overflow-hidden border-t border-white/5">
+    <section id="testimonials" className="relative w-full py-24 px-6 md:px-16 lg:px-24 bg-transparent overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-20">

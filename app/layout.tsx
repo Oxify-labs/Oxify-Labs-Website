@@ -9,10 +9,10 @@ const geistMono = Geist_Mono({
 });
 
 const instrumentSerif = Instrument_Serif({
-  variable: "--font-sentient",
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
   weight: "400",
-  style: ["normal", "italic"],
+  style: ["italic"],
 });
 
 const barlow = Barlow({
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistMono.variable} ${instrumentSerif.variable} ${barlow.variable} font-body font-light antialiased text-foreground relative min-h-screen bg-black`}
+        className={`${geistMono.variable} ${instrumentSerif.variable} ${barlow.variable} font-body font-light antialiased relative min-h-screen`}
         suppressHydrationWarning
       >
         <div className="fixed inset-0 z-0 overflow-hidden bg-black pointer-events-none">

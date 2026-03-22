@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Supabase">
+  <rect width="24" height="24" rx="4" fill="#04131D"/>
+  <path d="M8.5 5.2c.2-.4.6-.7 1-.7h6.1c.9 0 1.4 1 1 1.7l-6.1 12.5c-.2.4-.6.7-1 .7H3.4c-.9 0-1.4-1-1-1.7L8.5 5.2z" fill="#3ECF8E"/>
+  <path d="M15.4 4.5c.9 0 1.4 1 1 1.7l-3.7 7.5h3.9c.9 0 1.4 1 1 1.7l-1.1 2.3c-.2.4-.6.7-1 .7H9.8l5-10.2h-3.5c-.9 0-1.4-1-1-1.7l.9-1.9c.2-.4.6-.7 1-.7h3.2z" fill="#A7F3D0"/>
+</svg>

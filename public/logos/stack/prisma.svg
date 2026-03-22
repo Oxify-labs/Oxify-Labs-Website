@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Prisma">
+  <rect width="24" height="24" rx="4" fill="#0B1228"/>
+  <path d="M10.7 4.8c.3-.6 1.1-.6 1.4 0l5.9 11.3c.2.4 0 .9-.4 1.1l-4 1.8c-.5.2-1-.1-1.1-.6L10 6.9c0-.2 0-.3.1-.5l.6-1.6z" fill="#E5E7EB"/>
+  <path d="M8.1 9.2c-.2-.4.2-.8.6-.8h1.3l2.1 9.9c.1.4-.3.8-.7.7L8.3 18c-.3-.1-.5-.4-.4-.7z" fill="#94A3B8"/>
+</svg>

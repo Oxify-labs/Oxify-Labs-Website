@@ -32,10 +32,10 @@ const steps = [
 
 export const Process = () => {
     return (
-        <section className="relative w-full min-h-[700px] py-32 px-6 md:px-16 lg:px-24 flex items-center justify-center overflow-hidden bg-transparent">
+        <section className="relative w-full py-24 px-6 md:px-16 lg:px-24 flex items-center justify-center overflow-hidden bg-transparent">
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto min-h-[500px]">
+            <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
                 {/* Badge */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
