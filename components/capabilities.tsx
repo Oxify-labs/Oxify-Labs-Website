@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 
 export function Capabilities() {
   return (
@@ -48,7 +47,7 @@ export function Capabilities() {
               Every component is intentional. We build modern, high-performance frontend applications that deliver exceptional user experiences.
             </p>
             <div className="pt-4">
-              <a href="#contact" className="inline-flex items-center gap-2 text-white font-medium hover:text-white/80 transition-colors">
+              <a href="/teams" className="inline-flex items-center gap-2 text-white font-medium hover:text-white/80 transition-colors">
                 Explore frontend <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
@@ -86,7 +85,7 @@ export function Capabilities() {
               We engineer scalable backend systems, microservices, and distributed systems designed for long-term stability and high performance.
             </p>
             <div className="pt-4">
-              <a href="#contact" className="inline-flex items-center gap-2 text-white font-medium hover:text-white/80 transition-colors">
+              <a href="/teams" className="inline-flex items-center gap-2 text-white font-medium hover:text-white/80 transition-colors">
                 Explore backend <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>

@@ -12,7 +12,7 @@ import { CtaFooter } from "@/components/cta-footer";
 export default function Home() {
   return (
     <>
-      <main className="relative z-10 selection:bg-white/20 selection:text-white pb-32">
+      <main className="relative z-10 min-h-screen selection:bg-white/20 selection:text-white pb-32">
         <Hero />
         <TechStack />
         <Process />

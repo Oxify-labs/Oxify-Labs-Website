@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { HlsVideo } from "./hls-video";
 
 const steps = [
     {

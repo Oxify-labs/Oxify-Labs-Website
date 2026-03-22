@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HlsVideo } from "./hls-video";
 
 export function ImpactStats() {
   const stats = [

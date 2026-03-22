@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { px } from "./utils";
 
 export const Pill = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   return (

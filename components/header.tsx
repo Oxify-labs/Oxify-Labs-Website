@@ -1,12 +1,12 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export function Header() {
     const menuItems = [
         { name: "Home", href: "/", external: false },
+        { name: "Team", href: "/teams", external: false },
         { name: "Capabilities", href: "/#capabilities", external: false },
         { name: "Philosophy", href: "/#philosophy", external: false },
         { name: "Stack", href: "/#stack", external: false },

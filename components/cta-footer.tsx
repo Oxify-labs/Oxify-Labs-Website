@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { HlsVideo } from "./hls-video";
 import Link from "next/link";
 
 export function CtaFooter() {
@@ -45,7 +44,7 @@ export function CtaFooter() {
               Book a Call <ArrowUpRight className="w-4 h-4" />
             </button>
           </a>
-          <a href="#stack">
+          <a href="/#stack">
             <button className="bg-white text-black px-8 py-4 rounded-full font-medium transition-transform hover:scale-105">
               View Stack
             </button>
@@ -59,15 +58,15 @@ export function CtaFooter() {
           © {currentYear} Oxify Labs, Kolkata
         </div>
         <div className="flex items-center gap-6 text-white/40 text-xs font-mono">
-          <Link href="#" className="hover:text-white transition-colors">
+          <Link href="/privacy" className="hover:text-white transition-colors">
             Privacy
           </Link>
-          <Link href="#" className="hover:text-white transition-colors">
+          <Link href="/terms" className="hover:text-white transition-colors">
             Terms
           </Link>
-          <a href="mailto:sohomchatterjee07@gmail.com" className="hover:text-white transition-colors">
+          <Link href="/contact" className="hover:text-white transition-colors">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </section>

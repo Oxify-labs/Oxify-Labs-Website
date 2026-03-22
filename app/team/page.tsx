@@ -2,6 +2,7 @@
 
 import { Pill } from "@/components/pill";
 import { ProfileCard } from "@/components/profile-card";
+import Link from "next/link";
 
 // Sample Data - Replace with real info
 const TEAM = [
@@ -59,21 +60,29 @@ const TEAM = [
 
 export default function TeamPage() {
     return (
-        <main className="min-h-screen pt-32 pb-20 px-6">
-            <div className="max-w-7xl mx-auto">
-                <div className="space-y-6 max-w-2xl mb-16">
+        <main className="relative z-10 min-h-screen pt-32 pb-20 px-6 md:px-10 lg:px-16">
+            <div className="max-w-7xl mx-auto w-full">
+                <div className="space-y-6 max-w-3xl mb-12 md:mb-16">
                     <Pill>THE SQUAD</Pill>
-                    <h1 className="font-sentient text-5xl md:text-7xl font-light tracking-tight text-foreground">
+                    <h1 className="font-heading italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-foreground leading-[0.95]">
                         Our Team
                     </h1>
-                    <p className="font-mono text-muted-foreground text-lg">
+                    <p className="font-body font-light text-white/70 text-base md:text-lg max-w-2xl">
                         Engineers, designers, and thinkers crafting the future.
                     </p>
+                    <div className="flex flex-wrap items-center gap-4 pt-2">
+                        <Link href="/#capabilities" className="liquid-glass-strong px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-white/90 transition-colors">
+                            Explore Capabilities
+                        </Link>
+                        <Link href="/#stack" className="text-sm font-medium text-white/70 hover:text-white transition-colors">
+                            View Stack
+                        </Link>
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                     {TEAM.map((member) => (
-                        <div key={member.name} className="h-full min-h-[400px]">
+                        <div key={member.name} className="h-full min-h-[380px] md:min-h-[400px]">
                             <ProfileCard {...member} />
                         </div>
                     ))}
