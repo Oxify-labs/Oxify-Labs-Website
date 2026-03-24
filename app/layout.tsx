@@ -37,6 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          rel="preload"
+          as="video"
+          href="https://res.cloudinary.com/ddxfzuseh/video/upload/v1774330332/background_a1ii7q.mp4"
+          type="video/mp4"
+        />
+      </head>
       <body
         className={`${geistMono.variable} ${instrumentSerif.variable} ${barlow.variable} font-body font-light antialiased relative min-h-screen`}
         suppressHydrationWarning

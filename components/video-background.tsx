@@ -44,12 +44,12 @@ export function VideoBackground() {
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           className={`absolute top-0 left-0 w-full h-full object-cover scale-[1.05] transition-opacity duration-1000 ${
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <source src="https://res.cloudinary.com/ddxfzuseh/video/upload/v1774329741/background_a1ii7q.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/ddxfzuseh/video/upload/v1774330332/background_a1ii7q.mp4" type="video/mp4" />
         </video>
       )}
       <div className="absolute inset-0 bg-black/40" />
