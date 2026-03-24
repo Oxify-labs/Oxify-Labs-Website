@@ -32,10 +32,10 @@ const SOCIALS = [
 
 export default function ContactPage() {
   return (
-    <main className="relative z-10 min-h-screen pt-32 pb-20 px-6 md:px-10 lg:px-16">
-      <section className="mx-auto max-w-4xl liquid-glass rounded-2xl p-8 md:p-10">
+    <main className="relative z-10 min-h-screen pt-28 sm:pt-32 pb-20 px-4 sm:px-6 md:px-10 lg:px-16">
+      <section className="mx-auto max-w-4xl liquid-glass rounded-2xl p-6 sm:p-8 md:p-10">
         <p className="text-xs uppercase tracking-[0.2em] text-white/50 mb-4">Contact</p>
-        <h1 className="font-heading italic text-4xl md:text-6xl leading-[0.95] text-white mb-6">
+        <h1 className="font-heading italic text-3xl sm:text-4xl md:text-6xl leading-[0.95] text-white mb-6">
           Start Your Project
         </h1>
         <p className="font-body text-white/70 leading-relaxed mb-8">
@@ -59,7 +59,7 @@ export default function ContactPage() {
         {/* Socials */}
         <div className="mb-10">
           <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-4">Follow Us</p>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             {SOCIALS.map((social) => (
               <a
                 key={social.name}

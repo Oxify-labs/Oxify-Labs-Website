@@ -69,7 +69,7 @@ const TEAM = [
 
 export default function TeamPage() {
     return (
-        <main className="relative z-10 min-h-screen pt-32 pb-20 px-6 md:px-10 lg:px-16">
+        <main className="relative z-10 min-h-screen pt-28 sm:pt-32 pb-20 px-4 sm:px-6 md:px-10 lg:px-16">
             <div className="max-w-7xl mx-auto w-full">
                 <div className="space-y-6 max-w-3xl mb-12 md:mb-16">
                     <Pill>THE SQUAD</Pill>

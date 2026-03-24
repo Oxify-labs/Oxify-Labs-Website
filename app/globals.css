@@ -173,3 +173,36 @@
     animation: fade-in 0.8s ease-out forwards;
   }
 }
+
+/* ── Reduced-motion: kill all animations & transitions ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Fallback for browsers without backdrop-filter support ── */
+@supports not (backdrop-filter: blur(1px)) {
+  .liquid-glass {
+    background: rgba(10, 15, 26, 0.85);
+  }
+  .liquid-glass-strong {
+    background: rgba(10, 15, 26, 0.92);
+  }
+  .glass-subtle {
+    background: rgba(10, 15, 26, 0.85);
+  }
+}
+
+/* ── Mobile: reduce expensive blur on low-end hardware ── */
+@media (max-width: 768px) {
+  .liquid-glass-strong {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
