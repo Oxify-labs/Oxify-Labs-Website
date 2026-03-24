@@ -44,10 +44,10 @@ export function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="relative w-full py-24 px-6 md:px-16 lg:px-24 bg-transparent overflow-hidden border-t border-white/5">
+    <section id="testimonials" className="relative w-full py-20 sm:py-24 px-4 sm:px-6 md:px-16 lg:px-24 bg-transparent overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-20">
+        <div className="flex flex-col items-center text-center mb-14 sm:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading italic text-white"
           >
             Straight from the team.
           </motion.h2>
@@ -78,7 +78,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.08 }}
-              className="liquid-glass rounded-2xl p-7 flex flex-col justify-between gap-6"
+              className="liquid-glass rounded-2xl p-5 sm:p-7 flex flex-col justify-between gap-5 sm:gap-6"
             >
               <p className="text-white/75 font-body font-light text-sm italic leading-relaxed">
                 "{testimonial.quote}"
@@ -89,6 +89,7 @@ export function Testimonials() {
                     src={testimonial.image}
                     alt={testimonial.author}
                     fill
+                    sizes="36px"
                     className="object-cover object-center"
                   />
                 </div>

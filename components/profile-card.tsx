@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
@@ -22,6 +22,7 @@ interface ProfileCardProps {
 
 export function ProfileCard({ name, role, bio, image, socials, imageClassName, imageStyle }: ProfileCardProps) {
     const ref = useRef<HTMLDivElement>(null);
+    const reducedMotion = useReducedMotion();
 
     // Mouse position relative to the element (for gradient)
     const x = useMotionValue(0);
@@ -46,7 +47,7 @@ export function ProfileCard({ name, role, bio, image, socials, imageClassName, i
     const gradient = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(255,255,255,0.1), transparent 80%)`;
 
     function handleMouseMove({ clientX, clientY }: React.MouseEvent<HTMLDivElement>) {
-        if (!ref.current) return;
+        if (!ref.current || reducedMotion) return;
 
         const rect = ref.current.getBoundingClientRect();
 
@@ -73,7 +74,7 @@ export function ProfileCard({ name, role, bio, image, socials, imageClassName, i
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            style={{
+            style={reducedMotion ? undefined : {
                 transformStyle: "preserve-3d",
                 rotateX,
                 rotateY,
@@ -94,6 +95,7 @@ export function ProfileCard({ name, role, bio, image, socials, imageClassName, i
                             src={image}
                             alt={name}
                             fill
+                            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 280px"
                             className={`object-cover object-center transition-transform duration-500 group-hover:scale-105 ${imageClassName || ""}`}
                             style={imageStyle}
                         />
@@ -102,9 +104,9 @@ export function ProfileCard({ name, role, bio, image, socials, imageClassName, i
 
                 {/* Content */}
                 <div className="flex-1">
-                    <h3 className="font-sentient text-2xl font-medium text-foreground">{name}</h3>
-                    <p className="font-mono text-xs text-muted-foreground mt-2 uppercase tracking-wider">{role}</p>
-                    <p className="mt-4 text-sm text-foreground/80 leading-relaxed font-light">
+                    <h3 className="font-heading italic text-2xl font-medium text-white">{name}</h3>
+                    <p className="font-body text-xs text-white/60 mt-2 uppercase tracking-wider">{role}</p>
+                    <p className="mt-4 text-sm text-white/80 leading-relaxed font-light">
                         {bio}
                     </p>
                 </div>
@@ -112,22 +114,22 @@ export function ProfileCard({ name, role, bio, image, socials, imageClassName, i
                 {/* Socials */}
                 <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-4">
                     {socials?.github && (
-                        <a href={socials.github} target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-white">
+                        <a href={socials.github} target="_blank" rel="noreferrer" className="text-white/50 transition-colors hover:text-white">
                             <Github className="h-5 w-5" />
                         </a>
                     )}
                     {socials?.linkedin && (
-                        <a href={socials.linkedin} target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-white">
+                        <a href={socials.linkedin} target="_blank" rel="noreferrer" className="text-white/50 transition-colors hover:text-white">
                             <Linkedin className="h-5 w-5" />
                         </a>
                     )}
                     {socials?.twitter && (
-                        <a href={socials.twitter} target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-white">
+                        <a href={socials.twitter} target="_blank" rel="noreferrer" className="text-white/50 transition-colors hover:text-white">
                             <Twitter className="h-5 w-5" />
                         </a>
                     )}
                     {socials?.email && (
-                        <a href={socials.email} className="text-muted-foreground transition-colors hover:text-white">
+                        <a href={socials.email} className="text-white/50 transition-colors hover:text-white">
                             <Mail className="h-5 w-5" />
                         </a>
                     )}
