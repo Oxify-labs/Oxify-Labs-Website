@@ -28,10 +28,10 @@ export function Philosophy() {
   ];
 
   return (
-    <section id="philosophy" className="relative w-full py-24 px-6 md:px-16 lg:px-24 bg-transparent overflow-hidden">
+    <section id="philosophy" className="relative w-full py-20 sm:py-24 px-4 sm:px-6 md:px-16 lg:px-24 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export function Philosophy() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading italic text-white"
           >
             The difference is how we build.
           </motion.h2>
@@ -62,7 +62,7 @@ export function Philosophy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="liquid-glass rounded-2xl p-8 flex flex-col"
+              className="liquid-glass rounded-2xl p-6 sm:p-8 flex flex-col"
             >
               <div className="liquid-glass-strong rounded-full w-12 h-12 flex items-center justify-center mb-6">
                 {principle.icon}

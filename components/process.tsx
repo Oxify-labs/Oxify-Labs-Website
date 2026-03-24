@@ -32,7 +32,7 @@ const steps = [
 
 export const Process = () => {
     return (
-        <section className="relative w-full py-24 px-6 md:px-16 lg:px-24 flex items-center justify-center overflow-hidden bg-transparent">
+        <section className="relative w-full py-20 sm:py-24 px-4 sm:px-6 md:px-16 lg:px-24 flex items-center justify-center overflow-hidden bg-transparent">
 
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
@@ -53,7 +53,7 @@ export const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white mb-8"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading italic text-white mb-6 sm:mb-8"
                 >
                     You define the vision. We build the infrastructure.
                 </motion.h2>
@@ -64,7 +64,7 @@ export const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-lg md:text-xl text-white/60 font-body font-light mb-12 max-w-2xl"
+                    className="text-base sm:text-lg md:text-xl text-white/60 font-body font-light mb-10 sm:mb-12 max-w-2xl"
                 >
                     From rapid MVP prototyping to production-ready microservices. We handle the architecture, design, code, and deployment.
                 </motion.p>
@@ -77,7 +77,7 @@ export const Process = () => {
                     transition={{ duration: 0.6, delay: 0.3 }}
                 >
                     <a href="mailto:sohomchatterjee07@gmail.com?subject=Start%20a%20Project">
-                        <button className="liquid-glass-strong px-8 py-4 rounded-full flex items-center gap-2 text-white font-medium transition-transform hover:scale-105">
+                        <button className="liquid-glass-strong px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center gap-2 text-white font-medium transition-transform hover:scale-105">
                             Start a Project <ArrowUpRight className="w-4 h-4" />
                         </button>
                     </a>
