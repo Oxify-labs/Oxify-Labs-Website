@@ -49,7 +49,7 @@ export function VideoBackground() {
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <source src="https://collection.cloudinary.com/ddxfzuseh/d88184f67b18b7fba580e2e1ff84998d" type="video/mp4" />
+          <source src="https://res.cloudinary.com/ddxfzuseh/video/upload/v1774329741/background_a1ii7q.mp4" type="video/mp4" />
         </video>
       )}
       <div className="absolute inset-0 bg-black/40" />
