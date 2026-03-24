@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface BlurTextProps {
@@ -10,7 +10,16 @@ interface BlurTextProps {
 }
 
 export function BlurText({ text, className, delay = 0.1 }: BlurTextProps) {
+  const prefersReducedMotion = useReducedMotion();
   const words = text.split(" ");
+
+  if (prefersReducedMotion) {
+    return (
+      <div className={cn("justify-center text-center flex flex-wrap gap-x-[0.25em]", className)}>
+        {text}
+      </div>
+    );
+  }
 
   const container = {
     hidden: { opacity: 0 },
