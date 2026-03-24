@@ -2,12 +2,21 @@
 
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export function Header() {
+    const pathname = usePathname();
+
     const menuItems = [
         { name: "Home", href: "/", external: false },
         { name: "Team", href: "/teams", external: false },
     ];
+
+    const isActive = (href: string) => {
+        if (href === "/") return pathname === "/";
+        if (href === "/teams") return pathname.startsWith("/team");
+        return pathname === href;
+    };
 
     return (
         <header className="fixed top-4 left-0 right-0 z-50 px-3 sm:px-6 mt-2 sm:mt-4">
@@ -25,9 +34,13 @@ export function Header() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="transition-colors hover:text-white"
+                            className="relative pb-1 transition-colors hover:text-white"
                         >
                             {item.name}
+                            <span
+                                className={`absolute left-0 -bottom-0.5 h-0.5 w-full rounded-full bg-white transition-opacity ${isActive(item.href) ? "opacity-100" : "opacity-0"}`}
+                                aria-hidden="true"
+                            />
                         </Link>
                     ))}
                 </nav>
@@ -38,9 +51,13 @@ export function Header() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="transition-colors hover:text-white"
+                            className="relative pb-1 transition-colors hover:text-white"
                         >
                             {item.name}
+                            <span
+                                className={`absolute left-0 -bottom-0.5 h-0.5 w-full rounded-full bg-white transition-opacity ${isActive(item.href) ? "opacity-100" : "opacity-0"}`}
+                                aria-hidden="true"
+                            />
                         </Link>
                     ))}
                 </nav>
