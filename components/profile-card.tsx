@@ -8,8 +8,10 @@ import { useRef } from "react";
 interface ProfileCardProps {
     name: string;
     role: string;
+    secondaryRole?: string;
     bio: string;
     image: string;
+    labels?: string[];
     socials?: {
         github?: string;
         linkedin?: string;
@@ -20,7 +22,7 @@ interface ProfileCardProps {
     imageStyle?: React.CSSProperties;
 }
 
-export function ProfileCard({ name, role, bio, image, socials, imageClassName, imageStyle }: ProfileCardProps) {
+export function ProfileCard({ name, role, secondaryRole, bio, image, labels, socials, imageClassName, imageStyle }: ProfileCardProps) {
     const ref = useRef<HTMLDivElement>(null);
     const reducedMotion = useReducedMotion();
 
@@ -104,8 +106,20 @@ export function ProfileCard({ name, role, bio, image, socials, imageClassName, i
 
                 {/* Content */}
                 <div className="flex-1">
+                    {labels && labels.length > 0 && (
+                        <div className="mb-4 flex flex-wrap gap-2">
+                            {labels.map((label) => (
+                                <span key={label} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] text-white/65">
+                                    {label}
+                                </span>
+                            ))}
+                        </div>
+                    )}
                     <h3 className="font-heading italic text-2xl font-medium text-white">{name}</h3>
                     <p className="font-body text-xs text-white/60 mt-2 uppercase tracking-wider">{role}</p>
+                    {secondaryRole && (
+                        <p className="font-body text-[11px] text-white/45 mt-1 uppercase tracking-wider">{secondaryRole}</p>
+                    )}
                     <p className="mt-4 text-sm text-white/80 leading-relaxed font-light">
                         {bio}
                     </p>
