@@ -6,7 +6,7 @@ import { ProfileCard } from "@/components/profile-card";
 const LEADERSHIP = [
     {
         name: "Rohit Kumar Kundu",
-        role: "Executive Chairman & CEO",
+        role: "Co-Founder & COO",
         secondaryRole: "Chief Executive Officer (CEO)",
         bio: "Leads corporate strategy, fundraising, and the overall company vision.",
         image: "/Rohit.jpeg",
@@ -18,7 +18,7 @@ const LEADERSHIP = [
     },
     {
         name: "Sohom Chatterjee",
-        role: "Director & Founder",
+        role: "Founder & CEO",
         secondaryRole: "Founder & Chief AI/ML Researcher",
         bio: "Drives strategic R&D, innovation, and technical breakthroughs across Oxify Labs.",
         image: "/Sohom.jpeg",
