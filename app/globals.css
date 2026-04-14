@@ -99,6 +99,10 @@
     @apply font-body font-light text-white/60 text-sm;
   }
 
+  button, a {
+    touch-action: manipulation;
+  }
+
   button {
     @apply font-body rounded-full;
   }

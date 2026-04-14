@@ -43,7 +43,7 @@ export function Hero() {
           </a>
           <a
             href="#stack"
-            className="text-white/70 hover:text-white font-medium transition-colors text-sm sm:text-base"
+            className="text-white/70 hover:text-white font-medium transition-colors text-sm sm:text-base py-3 px-2 -mx-2"
           >
             View our architecture
           </a>

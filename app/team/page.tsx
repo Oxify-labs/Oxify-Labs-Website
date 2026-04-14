@@ -100,7 +100,7 @@ export default function TeamPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                         {LEADERSHIP.map((member) => (
-                            <div key={member.name} className="h-full min-h-[380px] md:min-h-[400px]">
+                            <div key={member.name} className="h-full sm:min-h-[380px] md:min-h-[400px]">
                                 <ProfileCard {...member} />
                             </div>
                         ))}

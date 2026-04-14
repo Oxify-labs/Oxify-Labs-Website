@@ -39,8 +39,8 @@ export function LogoLoopStack() {
 
       <div className="relative z-10">
         {/* Side fade masks — uses rgba so they blend with any background */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-black/70 to-transparent z-20" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-black/70 to-transparent z-20" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 sm:w-28 bg-gradient-to-r from-black/70 to-transparent z-20" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 sm:w-28 bg-gradient-to-l from-black/70 to-transparent z-20" />
 
         <div className="flex flex-col gap-4">
           {/* Primary rail — large, full color */}
