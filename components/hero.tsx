@@ -1,54 +1,43 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronRight, Hash } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { BlurText } from "./blur-text";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative w-full flex items-start justify-center overflow-hidden">
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 text-center pt-36 sm:pt-44 md:pt-52 pb-20 sm:pb-28 max-w-5xl mx-auto">
-        {/* Heading */}
-        <BlurText
-          text="Where systems architecture meets long-term compounding."
-          className="text-3xl sm:text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.9] sm:leading-[0.85] font-heading italic text-white mb-6 sm:mb-8"
-          delay={0.1}
-        />
+    <section className="relative w-full flex items-center justify-center min-h-[90vh] bg-black overflow-hidden pt-20">
+      <div className="relative z-10 flex flex-col items-start justify-center px-6 md:px-12 w-full max-w-7xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-heading font-bold text-white uppercase leading-[0.85] tracking-tighter mb-8 md:mb-12 max-w-[1400px]"
+        >
+          We Build High-Performance Digital Systems
+        </motion.h1>
 
-        {/* Subtext */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-base sm:text-lg md:text-xl text-white/60 font-body font-light max-w-2xl mb-10 sm:mb-12 px-2"
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="text-lg md:text-2xl text-white/80 font-body font-light max-w-3xl mb-12 md:mb-16 leading-relaxed"
         >
-          We build resilient software systems, SaaS products, and MVPs. Build fast, but scale responsibly.
+          A multi-disciplinary technology studio specializing in advanced engineering, AI/ML, and Web3 solutions for enterprise and high-growth startups.
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 w-full sm:w-auto"
+          transition={{ delay: 0.6, duration: 0.5 }}
         >
-          <a href="https://calendly.com/sohomchatterjee07-oxifylabs/let-s-build-something-great" target="_blank" rel="noreferrer noopener">
-            <button className="liquid-glass-strong px-6 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center justify-center gap-2 text-white font-medium transition-transform hover:scale-105 w-full sm:w-auto">
-              Discuss your system <ArrowUpRight className="w-4 h-4" />
+          <a href="#contact" className="inline-block group">
+            <button className="bg-white text-black px-8 md:px-12 py-4 md:py-6 flex items-center justify-center gap-3 font-heading font-bold uppercase tracking-widest text-lg md:text-xl transition-all duration-300 hover:bg-zinc-200">
+              Start A Project 
+              <ArrowUpRight className="w-6 h-6 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </button>
-          </a>
-          <a
-            href="#stack"
-            className="text-white/70 hover:text-white font-medium transition-colors text-sm sm:text-base py-3 px-2 -mx-2"
-          >
-            View our architecture
           </a>
         </motion.div>
       </div>
     </section>
   );
-};
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export function Header() {
@@ -19,55 +19,34 @@ export function Header() {
     };
 
     return (
-        <header className="fixed top-4 left-0 right-0 z-50 px-3 sm:px-6 mt-2 sm:mt-4">
-            <div className="mx-auto max-w-7xl w-full grid grid-cols-[auto_1fr_auto] md:grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-4">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/20">
+            <div className="mx-auto max-w-7xl w-full flex items-center justify-between px-6 py-4">
                 {/* Left: Brand */}
-                <Link href="/" className="justify-self-start inline-flex flex-col leading-none">
-                    <span className="font-heading italic text-white text-lg sm:text-xl md:text-2xl tracking-tight">
+                <Link href="/" className="inline-flex">
+                    <span className="font-heading font-bold uppercase tracking-tighter text-white text-2xl">
                         Oxify Labs
                     </span>
                 </Link>
 
-                {/* Mobile Nav */}
-                <nav className="md:hidden justify-self-center flex items-center gap-2 px-3 py-2 rounded-full liquid-glass text-xs font-medium text-foreground/90">
+                {/* Center: Navigation */}
+                <nav className="hidden md:flex items-center gap-8">
                     {menuItems.map((item) => (
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="relative pb-1 transition-colors hover:text-white"
+                            className={`font-heading font-bold uppercase tracking-widest text-sm transition-colors ${isActive(item.href) ? "text-white" : "text-white/50 hover:text-white"}`}
                         >
                             {item.name}
-                            <span
-                                className={`absolute left-0 -bottom-0.5 h-0.5 w-full rounded-full bg-white transition-opacity ${isActive(item.href) ? "opacity-100" : "opacity-0"}`}
-                                aria-hidden="true"
-                            />
-                        </Link>
-                    ))}
-                </nav>
-
-                {/* Center: Navigation Pill */}
-                <nav className="hidden md:flex items-center gap-8 px-8 py-3 rounded-full liquid-glass text-sm font-medium text-foreground/90 justify-self-center">
-                    {menuItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className="relative pb-1 transition-colors hover:text-white"
-                        >
-                            {item.name}
-                            <span
-                                className={`absolute left-0 -bottom-0.5 h-0.5 w-full rounded-full bg-white transition-opacity ${isActive(item.href) ? "opacity-100" : "opacity-0"}`}
-                                aria-hidden="true"
-                            />
                         </Link>
                     ))}
                 </nav>
 
                 {/* Right: CTA */}
-                <a href="mailto:sohomchatterjee07@gmail.com?subject=Project%20Inquiry" className="justify-self-end">
-                    <button className="flex items-center gap-2 bg-white text-black px-3 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-medium transition-transform hover:scale-105 whitespace-nowrap">
-                        <span className="hidden sm:inline">Start a Project</span>
+                <a href="#contact">
+                    <button className="flex items-center gap-2 bg-white text-black px-6 py-3 font-heading font-bold uppercase tracking-widest text-sm transition-colors hover:bg-zinc-200">
+                        <span className="hidden sm:inline">Start Project</span>
                         <span className="sm:hidden">Start</span>
-                        <ArrowUpRight className="w-4 h-4" />
+                        <ArrowRight className="w-4 h-4" />
                     </button>
                 </a>
             </div>
