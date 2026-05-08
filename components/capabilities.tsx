@@ -99,7 +99,7 @@ export function Capabilities() {
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 className="overflow-hidden"
               >
-                <div className="pb-12 pl-16 md:pl-[6.5rem]">
+                <div className="pb-12 pl-16 md:pl-26">
                   <p className="text-xl md:text-3xl font-body font-light max-w-4xl text-white/70 leading-relaxed">
                     {cap.description}
                   </p>

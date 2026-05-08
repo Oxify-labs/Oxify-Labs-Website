@@ -10,8 +10,8 @@ export function LogoLoopStack() {
       <div className="absolute inset-0 bg-noise mix-blend-overlay opacity-30 pointer-events-none" />
       
       {/* Side gradients for smooth marquee fade */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 md:w-64 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-64 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-24 md:w-64 bg-linear-to-r from-black to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-64 bg-linear-to-l from-black to-transparent z-10 pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 12 }}
