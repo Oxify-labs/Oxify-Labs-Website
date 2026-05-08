@@ -1,44 +1,62 @@
-import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
-import "./globals.css";
-import { Header } from "../components/header";
+import React from "react"
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono, IBM_Plex_Sans } from 'next/font/google'
+import { Courier_Prime } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["700"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-});
+const _geist = Geist({ subsets: ["latin"] });
+const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _courierPrime = Courier_Prime({ weight: ["400", "700"], subsets: ["latin"] });
+const _ibmPlexSans = IBM_Plex_Sans({ weight: ["300", "400", "500", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Oxify Labs | Systems Architecture",
-  description: "Systems architecture for long-term compounding.",
-  icons: {
-    icon: '/favicon.ico',
+  title: 'Oxify Labs — Design clearly. Build fast. Scale responsibly.',
+  description: 'Oxify Labs is a technology studio building modern SaaS products, MVPs, and next-generation digital infrastructure. Execution-first. Always.',
+  keywords: ['technology studio', 'SaaS development', 'MVP engineering', 'product engineering', 'systems design'],
+  authors: [{ name: 'Oxify Labs' }],
+  openGraph: {
+    title: 'Oxify Labs — Design clearly. Build fast. Scale responsibly.',
+    description: 'Oxify Labs is a technology studio building modern SaaS products, MVPs, and next-generation digital infrastructure. Execution-first. Always.',
+    type: 'website',
+    url: 'https://oxify.labs',
+    siteName: 'Oxify Labs',
   },
-};
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Oxify Labs — Design clearly. Build fast. Scale responsibly.',
+    description: 'Oxify Labs is a technology studio building modern SaaS products, MVPs, and next-generation digital infrastructure.',
+  },
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${spaceGrotesk.variable} ${inter.variable} font-body bg-black text-white antialiased relative min-h-screen`}
-        suppressHydrationWarning
-      >
-        <div className="relative z-10 flex flex-col min-h-screen">
-          <Header />
-          {children}
-        </div>
+    <html lang="en">
+      <body className={`font-sans antialiased`}>
+        {children}
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }
