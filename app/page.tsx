@@ -138,10 +138,11 @@ export default function AgenticPage() {
         <div className="h-20" />
 
         {/* Title + metrics — anchored to bottom left */}
-        <div className="absolute inset-x-0 bottom-0 z-30 flex flex-col px-6 md:px-12 pb-12 max-w-3xl">
+        <div className="absolute inset-x-0 bottom-0 z-30 flex flex-col px-6 md:px-12 pb-12 overflow-hidden">
+          <div className="max-w-2xl">
           {/* Title */}
           <h1
-            className="text-6xl sm:text-7xl md:text-8xl font-light text-[#111] leading-none tracking-tight mb-10"
+            className="text-[clamp(2.5rem,8vw,5rem)] font-light text-[#111] leading-[1.05] tracking-tight mb-10 break-words"
             style={{
               fontFamily: '"IBM Plex Sans", sans-serif',
               opacity: heroReady ? 1 : 0,
@@ -173,6 +174,7 @@ export default function AgenticPage() {
                 <div className="text-xs text-black/40 tracking-widest uppercase mt-1" style={{ fontFamily: '"IBM Plex Sans", sans-serif' }}>{stat.label}</div>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </section>
