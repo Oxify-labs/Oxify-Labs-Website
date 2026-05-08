@@ -82,8 +82,8 @@ export default function TeamPage() {
             <div className="max-w-7xl mx-auto w-full">
                 <div className="space-y-6 max-w-3xl mb-12 md:mb-16">
                     <Pill>LEADERSHIP</Pill>
-                    <h1 className="font-heading italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-foreground leading-[0.95]">
-                        The People Building Oxify Labs
+                    <h1 className="font-heading italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-white leading-[0.95] uppercase">
+                        THE PEOPLE BUILDING<br />OXIFY LABS
                     </h1>
                     <p className="font-body font-light text-white/70 text-base md:text-lg max-w-2xl">
                         Meet the leaders shaping our vision, governance, product, technology, design, and growth.

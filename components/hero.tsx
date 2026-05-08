@@ -25,11 +25,17 @@ export function Hero() {
       />
 
       <div className="relative z-10 flex flex-col items-start justify-center px-6 md:px-12 w-full max-w-7xl mx-auto">
-        <BlurText
-          text="We Build High-Performance Digital Systems"
-          className="text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[9rem] font-heading font-bold text-white uppercase leading-[0.85] tracking-tighter mb-8 md:mb-12 max-w-[1400px] text-left"
-          delay={0.08}
-        />
+        <motion.h1 
+          className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[11rem] font-heading font-bold text-white uppercase leading-[0.85] tracking-tighter mb-8 md:mb-12 text-left w-full"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          WE BUILD<br />
+          HIGH-<br />
+          PERFORMANCE<br />
+          DIGITAL SYSTEMS
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
