@@ -587,13 +587,22 @@ export default function AgenticPage() {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-xl text-sm tracking-widest transition-all duration-200 ${
-                  plan.highlight
-                    ? "bg-[#111] text-white hover:bg-[#333]"
-                    : "border border-black/10 text-black/60 hover:border-black/25 hover:text-black hover:bg-black/4"
-                }`}>
+                <a
+                  href={
+                    plan.name === "Studio Partner"
+                      ? "https://wa.me/919332193076"
+                      : "mailto:oxifyhq@gmail.com"
+                  }
+                  target={plan.name === "Studio Partner" ? "_blank" : undefined}
+                  rel={plan.name === "Studio Partner" ? "noopener noreferrer" : undefined}
+                  className={`w-full py-3 rounded-xl text-sm tracking-widest transition-all duration-200 text-center block ${
+                    plan.highlight
+                      ? "bg-[#111] text-white hover:bg-[#333]"
+                      : "border border-black/10 text-black/60 hover:border-black/25 hover:text-black hover:bg-black/4"
+                  }`}
+                >
                   {plan.name === "Foundation" ? "LET'S TALK" : plan.name === "Studio Partner" ? "BECOME A PARTNER" : "START A CONVERSATION"}
-                </button>
+                </a>
               </BentoCard>
             ))}
           </div>

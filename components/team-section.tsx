@@ -126,7 +126,7 @@ function TeamCard({
       {/* Photo — aspect-ratio box so every image fits uniformly */}
       <div
         className={`relative w-full overflow-hidden bg-linear-to-b ${member.color}`}
-        style={{ aspectRatio: "4 / 3" }}
+        style={{ aspectRatio: "3 / 4" }}
       >
         <Image
           src={member.img}
@@ -224,8 +224,8 @@ export function TeamSection() {
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Grid — 2 cols on mobile/md, 3 on lg. CSS trick to center last row */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {TEAM.map((member, i) => (
             <TeamCard key={member.name} member={member} index={i} />
           ))}
