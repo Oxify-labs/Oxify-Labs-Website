@@ -142,7 +142,7 @@ export default function AgenticPage() {
           <div className="max-w-2xl">
           {/* Title */}
           <h1
-            className="text-[clamp(2.5rem,8vw,5rem)] font-light text-[#111] leading-[1.05] tracking-tight mb-10 break-words"
+            className="text-[clamp(2.5rem,8vw,5rem)] font-light text-[#111] leading-[1.05] tracking-tight mb-10 wrap-break-word"
             style={{
               fontFamily: '"IBM Plex Sans", sans-serif',
               opacity: heroReady ? 1 : 0,
