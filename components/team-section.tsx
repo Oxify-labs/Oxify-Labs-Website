@@ -91,7 +91,7 @@ function TeamCard({
       }}
     >
       {/* Photo */}
-      <div className={`relative overflow-hidden bg-gradient-to-b ${member.color}`} style={{ height: "280px" }}>
+      <div className={`relative overflow-hidden bg-linear-to-b ${member.color}`} style={{ height: "280px" }}>
         <Image
           src={member.img}
           alt={member.name}
@@ -141,7 +141,7 @@ export function TeamSection() {
         {/* Heading */}
         <div ref={headingRef} className="mb-16">
           <div
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] tracking-widest font-sans text-black/40 bg-black/[0.04] mb-5"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] tracking-widest font-sans text-black/40 bg-black/4 mb-5"
             style={{
               opacity: headingVisible ? 1 : 0,
               transform: headingVisible ? "translateY(0)" : "translateY(16px)",
@@ -182,7 +182,7 @@ export function TeamSection() {
 
         {/* Footer note */}
         <div
-          className="mt-12 pt-8 border-t border-black/[0.05] flex items-center justify-between flex-wrap gap-4"
+          className="mt-12 pt-8 border-t border-black/5 flex items-center justify-between flex-wrap gap-4"
           style={{
             opacity: headingVisible ? 1 : 0,
             transition: "opacity 0.8s cubic-bezier(0.16,1,0.3,1) 500ms",
