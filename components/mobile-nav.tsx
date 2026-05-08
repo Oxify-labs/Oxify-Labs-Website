@@ -28,13 +28,14 @@ export function MobileNav() {
 
         {/* Main bar */}
         <nav
-          className="flex items-center justify-between px-5 py-3 rounded-2xl border border-black/[0.06]"
+          className="flex items-center justify-between px-5 py-3 rounded-2xl border border-black/6"
           style={NAV_STYLE}
         >
-
-          {/* Desktop links */}
+          {/* Logo + Desktop links */}
           <div className="flex items-center gap-7">
-            <span className="font-pixel text-[10px] tracking-[0.25em] text-black shrink-0 md:inline-block">OXIFY LABS</span>
+            <span className="font-pixel text-[10px] tracking-[0.25em] text-black shrink-0">
+              OXIFY LABS
+            </span>
             <div className="hidden md:flex items-center gap-7" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
               {NAV_LINKS.map(l => (
                 <a
@@ -49,14 +50,17 @@ export function MobileNav() {
           </div>
 
           <div className="flex items-center gap-2">
-            <button className="text-[11px] px-4 py-2 rounded-xl border border-black/10 text-black/60 hover:text-black hover:border-black/20 hover:bg-black/[0.03] transition-all duration-200 tracking-wide hidden md:block" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
+            <button
+              className="text-[11px] px-4 py-2 rounded-xl border border-black/10 text-black/60 hover:text-black hover:border-black/20 hover:bg-black/3 transition-all duration-200 tracking-wide hidden md:block"
+              style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
+            >
               START BUILDING
             </button>
 
             {/* Burger — mobile only */}
             <button
               onClick={() => setOpen(v => !v)}
-              className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-[5px] rounded-lg hover:bg-black/[0.04] transition-colors"
+              className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-[5px] rounded-lg hover:bg-black/4 transition-colors"
               aria-label={open ? "Close menu" : "Open menu"}
             >
               <span
@@ -91,7 +95,7 @@ export function MobileNav() {
           style={{ maxHeight: open ? "320px" : "0px", opacity: open ? 1 : 0 }}
         >
           <div
-            className="rounded-2xl border border-black/[0.06] px-2 py-2 flex flex-col"
+            className="rounded-2xl border border-black/6 px-2 py-2 flex flex-col"
             style={NAV_STYLE}
           >
             {NAV_LINKS.map(l => (
@@ -99,14 +103,17 @@ export function MobileNav() {
                 key={l.label}
                 href={l.href}
                 onClick={close}
-                className="px-4 py-3 text-sm text-black/60 hover:text-black hover:bg-black/[0.03] rounded-xl transition-colors tracking-wide"
+                className="px-4 py-3 text-sm text-black/60 hover:text-black hover:bg-black/3 rounded-xl transition-colors tracking-wide"
                 style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
               >
                 {l.label}
               </a>
             ))}
             <div className="mt-1 px-2 pb-1">
-              <button className="w-full text-[11px] px-4 py-2.5 rounded-xl border border-black/10 text-black/60 hover:text-black hover:border-black/20 hover:bg-black/[0.03] transition-all duration-200 tracking-wide" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
+              <button
+                className="w-full text-[11px] px-4 py-2.5 rounded-xl border border-black/10 text-black/60 hover:text-black hover:border-black/20 hover:bg-black/3 transition-all duration-200 tracking-wide"
+                style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
+              >
                 START BUILDING
               </button>
             </div>

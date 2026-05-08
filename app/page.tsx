@@ -9,6 +9,7 @@ import { RevealText } from "@/components/reveal-text"
 import { StackingAgentCards } from "@/components/stacking-agent-cards"
 import { MobileNav } from "@/components/mobile-nav"
 import { DevExSection } from "@/components/devex-section"
+import { TeamSection } from "@/components/team-section"
 
 // ─── Intersection Observer hook ──────────────────────────────────────────────
 function useInView(threshold = 0.15) {
@@ -596,6 +597,9 @@ export default function AgenticPage() {
           </div>
         </div>
       </section>
+
+      {/* ── TEAM ──────────────────────────────────────────────────────────── */}
+      <TeamSection />
 
       {/* ── CTA ───────────────────────────────────────────────────────────── */}
       <section className="relative py-32 px-6 md:px-12 lg:px-20 border-t border-black/[0.06] overflow-hidden">
